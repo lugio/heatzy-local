@@ -10,7 +10,7 @@
 ### Compatibilité
 - Aucune modification du protocole, des identifiants d'entités ni des consignes par rapport à 1.0.1.
 
-## [1.0.1] — 2026-10-20
+## 1.0.1 — 2026-10-20 (version antérieure à la publication publique)
 
 ### Corrigé
 - Authentification LAN sur trames complètes, même si TCP fragmente les réponses ou concatène des notifications.
@@ -30,7 +30,5 @@
 ## 1.0.0 — développement initial
 
 Première implémentation locale Onyx : climate, lectures des états, réglages, programme et actions locales. Le manifeste portait 1.0.0 mais aucun tag ni release GitHub n'avait été créé.
-
-[1.0.1]: https://github.com/lugio/heatzy-local/releases/tag/v1.0.1
 
 [1.0.2]: https://github.com/lugio/heatzy-local/releases/tag/v1.0.2
