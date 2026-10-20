@@ -1,0 +1,15 @@
+name: Proposer une évolution
+description: Proposer une fonction et préciser ses preuves techniques.
+title: "[Évolution] "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Besoin et résultat souhaité
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Modèle, documentation et mesures disponibles
+      description: Distinguer ce qui est documenté de ce qui reste supposé.

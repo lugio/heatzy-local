@@ -1,0 +1,39 @@
+mettre_a_l_heure:
+  name: Mettre à l'heure
+  description: Synchronise week, hour et minute avec l'heure locale de Home Assistant, puis vérifie la lecture après 12 secondes.
+  fields:
+    entity_id:
+      name: Radiateur
+      required: true
+      selector:
+        entity:
+          integration: heatzy_local
+          domain: climate
+
+ecrire_programme:
+  name: Écrire le programme
+  description: Écrit 48 créneaux de 30 minutes sur un jour (1 lundi à 7 dimanche), ou les sept jours si jour=0. Sauvegarde avant, attente 12 secondes et vérification de tous les octets écrits.
+  fields:
+    entity_id:
+      name: Radiateur
+      required: true
+      selector:
+        entity:
+          integration: heatzy_local
+          domain: climate
+    jour:
+      name: Jour
+      description: 0 tous, 1 lundi, 2 mardi, 3 mercredi, 4 jeudi, 5 vendredi, 6 samedi, 7 dimanche.
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 7
+          step: 1
+          mode: box
+    ordres:
+      name: 48 ordres
+      description: Liste ordonnée de minuit à 23h30, valeurs cft, eco, fro ou stop.
+      required: true
+      selector:
+        object:

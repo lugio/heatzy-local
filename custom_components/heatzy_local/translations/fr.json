@@ -1,0 +1,104 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Radiateur Heatzy",
+        "description": "Adresse IP du radiateur sur votre réseau local. Le pilotage se fait sans passer par le cloud Gizwits.",
+        "data": {
+          "host": "Adresse IP",
+          "nom": "Nom"
+        }
+      }
+    },
+    "error": {
+      "injoignable": "Aucune réponse de cette adresse sur le port 12414.",
+      "pas_un_heatzy": "L'appareil répond mais ne s'identifie pas comme un produit Gizwits."
+    },
+    "abort": {
+      "already_configured": "Ce radiateur est déjà configuré."
+    }
+  },
+  "entity": {
+    "climate": {
+      "radiateur": {
+        "name": "[%key:component::climate::title%]"
+      }
+    },
+    "sensor": {
+      "consigne_confort": {
+        "name": "Consigne confort"
+      },
+      "consigne_eco": {
+        "name": "Consigne éco"
+      },
+      "mode_effectif": {
+        "name": "Mode effectif"
+      },
+      "derogation": {
+        "name": "Dérogation brute"
+      },
+      "horloge": {
+        "name": "Horloge interne"
+      },
+      "conso_rapportee": {
+        "name": "Donnée brute power_data"
+      },
+      "temperature_interne": {
+        "name": "Température interne"
+      },
+      "com_temp": {
+        "name": "com_temp brut"
+      },
+      "programme_creneau": {
+        "name": "Créneau prévu"
+      },
+      "programme": {
+        "name": "Programme"
+      }
+    },
+    "switch": {
+      "verrouillage": {
+        "name": "Verrouillage des touches"
+      },
+      "pilotage_serveur": {
+        "name": "Pilotage par Home Assistant"
+      }
+    },
+    "number": {
+      "confort": {
+        "name": "Consigne confort"
+      },
+      "eco": {
+        "name": "Consigne éco"
+      },
+      "week": {
+        "name": "Jour"
+      },
+      "hour": {
+        "name": "Heure"
+      },
+      "minute": {
+        "name": "Minute"
+      },
+      "derog_time": {
+        "name": "Durée dérogation"
+      }
+    },
+    "button": {
+      "synchroniser_horloge": {
+        "name": "Mettre à l’heure"
+      }
+    },
+    "select": {
+      "derogation": {
+        "name": "Dérogation",
+        "state": {
+          "off": "Désactivée",
+          "programme": "Programme",
+          "vacances": "Vacances",
+          "auto": "Auto (sans état de présence)"
+        }
+      }
+    }
+  }
+}

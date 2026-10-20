@@ -1,0 +1,26 @@
+name: Signaler un défaut
+description: Décrire un problème reproductible sans publier de données privées.
+title: "[Bug] "
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Versions intégration et Home Assistant
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Modèle du radiateur
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction et résultat attendu/observé
+      description: Préciser les mesures ; retirer passcodes, jetons, IP et identifiants personnels.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Extraits de logs expurgés
+      render: text

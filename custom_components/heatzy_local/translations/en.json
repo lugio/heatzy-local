@@ -1,0 +1,99 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Heatzy radiator",
+        "description": "IP address of the radiator on your local network. Control is fully local, without the Gizwits cloud.",
+        "data": {
+          "host": "IP address",
+          "nom": "Name"
+        }
+      }
+    },
+    "error": {
+      "injoignable": "No answer from this address on port 12414.",
+      "pas_un_heatzy": "The device answers but does not identify as a Gizwits product."
+    },
+    "abort": {
+      "already_configured": "This radiator is already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "consigne_confort": {
+        "name": "Comfort setpoint"
+      },
+      "consigne_eco": {
+        "name": "Eco setpoint"
+      },
+      "mode_effectif": {
+        "name": "Effective mode"
+      },
+      "derogation": {
+        "name": "Override raw"
+      },
+      "horloge": {
+        "name": "Device clock"
+      },
+      "conso_rapportee": {
+        "name": "Raw power_data"
+      },
+      "temperature_interne": {
+        "name": "Internal temperature"
+      },
+      "com_temp": {
+        "name": "com_temp raw"
+      },
+      "programme_creneau": {
+        "name": "Scheduled slot"
+      },
+      "programme": {
+        "name": "Programme"
+      }
+    },
+    "switch": {
+      "verrouillage": {
+        "name": "Key lock"
+      },
+      "pilotage_serveur": {
+        "name": "Controlled by Home Assistant"
+      }
+    },
+    "number": {
+      "confort": {
+        "name": "Comfort setpoint"
+      },
+      "eco": {
+        "name": "Eco setpoint"
+      },
+      "week": {
+        "name": "Weekday"
+      },
+      "hour": {
+        "name": "Hour"
+      },
+      "minute": {
+        "name": "Minute"
+      },
+      "derog_time": {
+        "name": "Override duration"
+      }
+    },
+    "button": {
+      "synchroniser_horloge": {
+        "name": "Sync clock"
+      }
+    },
+    "select": {
+      "derogation": {
+        "name": "Override",
+        "state": {
+          "off": "Disabled",
+          "programme": "Schedule",
+          "vacances": "Vacation",
+          "auto": "Auto (no presence state)"
+        }
+      }
+    }
+  }
+}
