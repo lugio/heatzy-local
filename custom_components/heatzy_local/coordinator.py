@@ -7,13 +7,13 @@ import os
 import re
 from pathlib import Path
 from uuid import uuid4
-from zoneinfo import ZoneInfo
 from datetime import datetime, timezone
 from datetime import timedelta
 
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
+from homeassistant.util import dt as dt_util
 
 from .const import DOMAIN, MODES_ORDRE, PERIODE_RELEVE
 from .gizwits import Appareil, ErreurHeatzy
@@ -68,7 +68,7 @@ class CoordinateurHeatzy(DataUpdateCoordinator[dict]):
 
     async def async_synchroniser_horloge(self) -> None:
         await self.async_ecrire_verifiee(
-            lambda: valeurs_horloge(datetime.now(ZoneInfo(self.hass.config.time_zone))),
+            lambda: valeurs_horloge(dt_util.now()),
             horloge_confirmee)
 
     async def _async_update_data(self) -> dict:

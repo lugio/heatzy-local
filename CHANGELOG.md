@@ -1,5 +1,14 @@
 # Historique des versions
 
+## [1.0.3] — 2026-10-25
+
+### Corrigé
+- Synchronisation de l'horloge : l'heure locale vient de `homeassistant.util.dt.now()` au lieu de
+  `ZoneInfo(...)`, qui lisait le fichier de fuseau sur le disque depuis la boucle d'événements (revue HACS).
+
+### Compatibilité
+- Aucune modification du protocole, des identifiants d'entités ni des consignes par rapport à 1.0.2.
+
 ## [1.0.2] — 2026-10-20
 
 ### Ajouté
